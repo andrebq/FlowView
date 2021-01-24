@@ -1,0 +1,53 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "Connections",
+"language": "GDScript",
+"path": "res://Connections.gd"
+}, {
+"base": "GraphNode",
+"class": "Deployment",
+"language": "GDScript",
+"path": "res://Deployment.gd"
+}, {
+"base": "GraphEdit",
+"class": "K8STemplate",
+"language": "GDScript",
+"path": "res://K8STemplate.gd"
+}, {
+"base": "GraphNode",
+"class": "KeyValuePair",
+"language": "GDScript",
+"path": "res://KeyValuePair.gd"
+}, {
+"base": "GraphNode",
+"class": "Metadata",
+"language": "GDScript",
+"path": "res://Metadata.gd"
+} ]
+_global_script_class_icons={
+"Connections": "",
+"Deployment": "",
+"K8STemplate": "",
+"KeyValuePair": "",
+"Metadata": ""
+}
+
+[application]
+
+config/name="Flow View"
+run/main_scene="res://MainView.tscn"
+config/icon="res://icon.png"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
