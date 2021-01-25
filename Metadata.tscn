@@ -25,6 +25,5 @@ margin_top = 24.0
 margin_right = 249.0
 margin_bottom = 152.0
 rect_min_size = Vector2( 0, 128 )
-max_columns = 2
 [connection signal="close_request" from="." to="." method="_on_Control_close_request"]
 [connection signal="resize_request" from="." to="." method="_on_Control_resize_request"]

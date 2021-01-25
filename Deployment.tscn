@@ -15,12 +15,12 @@ slot/0/left_color = Color( 1, 1, 1, 1 )
 slot/0/right_enabled = false
 slot/0/right_type = 0
 slot/0/right_color = Color( 1, 1, 1, 1 )
-slot/1/left_enabled = false
-slot/1/left_type = 0
-slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/left_enabled = true
+slot/1/left_type = 1
+slot/1/left_color = Color( 1, 0, 0, 1 )
 slot/1/right_enabled = false
-slot/1/right_type = 0
-slot/1/right_color = Color( 1, 1, 1, 1 )
+slot/1/right_type = -1
+slot/1/right_color = Color( 0, 0, 0, 1 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -33,7 +33,7 @@ margin_right = 253.0
 margin_bottom = 56.0
 rect_min_size = Vector2( 0, 32 )
 
-[node name="ItemList" type="ItemList" parent="."]
+[node name="Metadata" type="ItemList" parent="."]
 margin_left = 16.0
 margin_top = 57.0
 margin_right = 253.0
