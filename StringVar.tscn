@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://StringVar.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[node name="Control" type="GraphNode"]
+margin_left = -2.79474
+margin_top = -1.0
+margin_right = 170.205
+margin_bottom = 98.0
+title = "StringVar"
+show_close = true
+resizable = true
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VarName" type="LineEdit" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 157.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 0, 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ErrorIcon" type="TextureRect" parent="VarName"]
+visible = false
+anchor_left = 0.882
+anchor_top = 0.204
+anchor_right = 0.882
+anchor_bottom = 0.204
+rect_scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="LineEdit" parent="."]
+margin_left = 16.0
+margin_top = 57.0
+margin_right = 157.0
+margin_bottom = 89.0
+rect_min_size = Vector2( 0, 32 )
+[connection signal="close_request" from="." to="." method="_on_Control_close_request"]
+[connection signal="resize_request" from="." to="." method="_on_Control_resize_request"]
+[connection signal="text_changed" from="VarName" to="." method="_on_LineEdit_text_changed"]

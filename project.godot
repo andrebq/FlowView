@@ -33,13 +33,19 @@ _global_script_classes=[ {
 "class": "Metadata",
 "language": "GDScript",
 "path": "res://Metadata.gd"
+}, {
+"base": "GraphNode",
+"class": "StringVar",
+"language": "GDScript",
+"path": "res://StringVar.gd"
 } ]
 _global_script_class_icons={
 "Connections": "",
 "Deployment": "",
 "K8STemplate": "",
 "KeyValuePair": "",
-"Metadata": ""
+"Metadata": "",
+"StringVar": ""
 }
 
 [application]

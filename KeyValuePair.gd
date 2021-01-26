@@ -3,6 +3,11 @@ tool
 
 class_name KeyValuePair
 
+enum Slots {
+	KEY = 0
+	VALUE = 1
+}
+
 signal keypair_change(key,value)
 
 func _ready() -> void:
@@ -11,7 +16,12 @@ func _ready() -> void:
 	Connections.set_right_slot(self, 2, Connections.Types.KEY_VALUE)
 	
 	_recompute_keypair()
-	
+
+func update_slot_data(from, from_slot, to_slot, value) -> void:
+	if to_slot == Slots.KEY:
+		$Key.text = value
+	elif to_slot == Slots.VALUE:
+		$Value.text = value
 
 func _on_Control_resized() -> void:
 	pass 

@@ -3,10 +3,12 @@ extends Control
 var Deployment = preload("res://Deployment.tscn")
 var Metadata = preload("res://Metadata.tscn")
 var KeyValuePair = preload("res://KeyValuePair.tscn")
+var StringVar = preload("res://StringVar.tscn")
 
 var deployment_count = 0
 var metadata_count = 0
 var kp_count = 0
+var var_count = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -35,7 +37,16 @@ func _on_AddMetadata_pressed() -> void:
 
 func _on_AddKeyPair_pressed() -> void:
 	var kp = KeyValuePair.instance()
-	kp.title += ' ' + str(metadata_count)
+	kp.title += ' ' + str(kp_count)
 	kp_count += 1
 	kp.offset = self.rect_size / 2 + Vector2(rand_range(-20, 20), rand_range(-20, 20))
 	$K8STemplate.add_child(kp)
+
+
+func _on_Button_pressed():
+	var sv = StringVar.instance()
+	sv.title += ' ' + str(var_count)
+	sv.set_name(sv.title)
+	var_count += 1
+	sv.offset = self.rect_size / 2 + Vector2(rand_range(-20, 20), rand_range(-20, 20))
+	$K8STemplate.add_child(sv)
